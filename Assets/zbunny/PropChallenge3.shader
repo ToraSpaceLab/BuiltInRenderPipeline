@@ -1,4 +1,4 @@
-Shader "Holistic/PropChallenge2"
+Shader "Holistic/PropChallenge3"
 {
 	Properties{
 		_myTex ("Example Texture", 2D) = "white" {}
@@ -9,14 +9,15 @@ Shader "Holistic/PropChallenge2"
 		#pragma surface surf Lambert
 
 		sampler2D _myTex;
+		fixed4 _myColor;
 
 		struct Input{
 			float2 uv_myTex;
 		};
 
 		void surf (Input IN, inout SurfaceOutput o){
-			o.Albedo = tex2D(_myTex, IN.uv_myTex);
-			o.Albedo.g = 1;
+			float4 green = float4(0,1,0,1);
+			o.Albedo = (tex2D(_myTex, IN.uv_myTex) * green).rgb;
 		}
 
 		ENDCG
