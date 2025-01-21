@@ -9,7 +9,6 @@ Shader "Holistic/PropChallenge3"
 		#pragma surface surf Lambert
 
 		sampler2D _myTex;
-		fixed4 _myColor;
 
 		struct Input{
 			float2 uv_myTex;
