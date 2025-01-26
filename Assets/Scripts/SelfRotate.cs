@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SelfRotate : MonoBehaviour
 {
-	[SerializeField] float rotateSpeed = 10f;
+	[SerializeField] float rotateSpeed = 50f;
 
 	private void Update()
 	{
