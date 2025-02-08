@@ -3,4 +3,7 @@
 ![Rim Lighting](README/rim.gif)
 
 ### Logical Cutoffs
-![Rim Lighting](README/logical_cutoffs.png)
+![Logical Cutoffs](README/logical_cutoffs.png)
+
+### Blinn-Phong Lighting & Surface Output
+![Blinn-Phong Lighting & Surface Output](README/blinn_phong.png)
