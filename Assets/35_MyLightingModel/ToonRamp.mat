@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toon
+  m_Name: ToonRamp
   m_Shader: {fileID: 4800000, guid: bb790bc7507e77d478423fd90cb5afac, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
