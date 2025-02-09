@@ -1,4 +1,4 @@
-Shader "Holistic/Basic"
+Shader "Holistic/Basic1"
 {
 	Properties
 	{
@@ -6,6 +6,9 @@ Shader "Holistic/Basic"
 	}
 	SubShader
 	{
+		Tags {"Queue" = "Geometry+100"}
+		ZWrite Off
+		
 		CGPROGRAM
 		#pragma surface surf Lambert
 
