@@ -7,3 +7,6 @@
 
 ### Blinn-Phong Lighting & Surface Output
 ![Blinn-Phong Lighting & Surface Output](README/blinn_phong.png)
+
+### Stencil Buffer
+![Stencil Buffer](README/stencil.gif)
