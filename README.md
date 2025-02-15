@@ -14,3 +14,6 @@
 ### Vertex Extruding
 ![Vertex Extruding](README/extruding.gif)
 ![Vertex Extruding](README/extruding.png)
+
+### Outlining
+![Outlining](README/outlining.png)
