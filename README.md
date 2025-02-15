@@ -10,3 +10,7 @@
 
 ### Stencil Buffer
 ![Stencil Buffer](README/stencil.gif)
+
+### Vertex Extruding
+![Vertex Extruding](README/extruding.gif)
+![Vertex Extruding](README/extruding.png)
