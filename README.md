@@ -28,3 +28,4 @@
 
 ### Scrolling Textures
 ![Scrolling Textures](README/scrolling_textures.gif)
+![Scrolling Textures with Waves](README/scrolling_wave.gif)
