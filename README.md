@@ -20,3 +20,6 @@
 
 ### Glass
 ![Glass](README/glass_white.gif)
+
+### Waves
+![Waves](README/wave.gif)
