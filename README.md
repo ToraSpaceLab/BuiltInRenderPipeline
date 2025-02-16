@@ -23,3 +23,4 @@
 
 ### Waves
 ![Waves](README/wave.gif)
+![Waves](README/wave_smooth.gif)
