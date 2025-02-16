@@ -37,8 +37,11 @@ Shader "Holistic/Waves"
         {
             UNITY_INITIALIZE_OUTPUT(Input, o);
             float t = _Time * _Speed;
-            float waveHeight = sin(t + v.vertex.x * _Freq) * _Amp;
-            v.vertex.y = v.vertex.y + waveHeight;
+            
+            float waveHeight = sin(t + v.vertex.x * _Freq) * _Amp + sin(t*2 + v.vertex.x * _Freq*2) * _Amp;
+            float waveHeightZ = sin(t + v.vertex.z * _Freq) * _Amp + sin(t*2 + v.vertex.z * _Freq*2) * _Amp;
+            v.vertex.y = v.vertex.y + waveHeight + waveHeightZ;
+
             v.normal = normalize(float3(v.normal.x + waveHeight, v.normal.y, v.normal.z));
             o.vertColor = waveHeight + 2;
         }
@@ -47,7 +50,7 @@ Shader "Holistic/Waves"
         void surf (Input IN, inout SurfaceOutput o)
         {
             float4 c = tex2D(_MainTex, IN.uv_MainTex);
-            o.Albedo = c * IN.vertColor.rgb;
+            o.Albedo = c * IN.vertColor.rgb * _Tint;
         }
         
         ENDCG

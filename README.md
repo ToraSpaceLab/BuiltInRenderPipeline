@@ -22,5 +22,7 @@
 ![Glass](README/glass_white.gif)
 
 ### Waves
-![Waves](README/wave.gif)
-![Waves](README/wave_smooth.gif)
+![Waves_1](README/wave.gif)
+![Waves_2](README/wave_smooth.gif)
+![Waves_3](README/wave_more.gif)
+
