@@ -26,3 +26,5 @@
 ![Waves_2](README/wave_smooth.gif)
 ![Waves_3](README/wave_more.gif)
 
+### Scrolling Textures
+![Scrolling Textures](README/scrolling_textures.gif)
