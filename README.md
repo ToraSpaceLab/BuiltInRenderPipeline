@@ -35,3 +35,6 @@
 
 ### Ray Marching
 ![Ray Marching](README/ray_marching.png)
+
+### Spherical Fog
+![Spherical Fog](README/spherical_fog.gif)
