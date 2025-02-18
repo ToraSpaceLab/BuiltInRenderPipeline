@@ -38,3 +38,8 @@
 
 ### Spherical Fog
 ![Spherical Fog](README/spherical_fog.gif)
+
+
+### Volumetric Clouds Value Noise
+![Clouds1](README/cloud1.gif)
+![Clouds2](README/cloud2.gif)
