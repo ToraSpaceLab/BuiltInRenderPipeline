@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 695469710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: 40.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotationSpeed: 100
+  rotationSpeed: 1000
 --- !u!114 &695469715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,11 +240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CloudShader: {fileID: 4800000, guid: 1cbbd4a3ee163934dba45275af65ccef, type: 3}
-  MinHeight: 0
-  MaxHeight: 5
+  MinHeight: -7
+  MaxHeight: 20
   FadeDist: 2
-  Scale: 5
-  Steps: 50
+  Scale: 1.5
+  Steps: 15
   ValueNoiseImage: {fileID: 2800000, guid: c32e558dd1efb4342a341dc620f7fb43, type: 3}
   Sun: {fileID: 726453995}
 --- !u!1 &726453993
