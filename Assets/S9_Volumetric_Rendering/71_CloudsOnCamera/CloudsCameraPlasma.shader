@@ -1,4 +1,4 @@
-Shader "Holistic/CloudsCamera"
+Shader "Holistic/CloudsCameraPlasma"
 {
 	Properties
 	{
@@ -42,6 +42,7 @@ Shader "Holistic/CloudsCamera"
 			float4 _CameraPosWS;
 			float4x4 _CameraInvViewMatrix;
 
+			fixed3 plasma;
 
 			fixed4 integrate(fixed4 sum, float diffuse, float density, fixed4 bgcol, float t)
 			{
@@ -79,6 +80,26 @@ Shader "Holistic/CloudsCamera"
 
 			#define NOISEPROC(N, P) 1.75 * N * saturate((_MaxHeight - P.y)/_FadeDist)
 
+			fixed3 CalculatePlasma(float2 pos, float _Speed, float _Scale1, float _Scale2, float _Scale3, float _Scale4)
+			{
+				fixed3 col;
+				const float PI = 3.14159265;
+				float t = _Time.x * _Speed;
+				float xpos = pos.x * 0.001;
+				float ypos = pos.y * 0.001;
+				float c = sin(xpos * _Scale1 + t);
+				c += sin(ypos * _Scale2 + t);
+				c += sin(_Scale3 * (xpos * sin(t / 2.0) + ypos * cos(t / 3)) + t);
+				float c1 = pow(xpos + 0.5 * sin(t / 5), 2);
+				float c2 = pow(xpos + 0.5 * sin(t / 3), 2);
+				c += sin(sqrt(_Scale4 * (c1 + c2) + 1 + t));
+
+				col.r = sin(c / 4.0 * PI);
+				col.g = sin(c / 4.0 * PI + 2 * PI / 4);
+				col.b = sin(c / 4.0 * PI + 4 * PI / 4);
+
+				return col;
+			}
 
 			float noiseFromImage(float3 x)
 			{
@@ -212,6 +233,7 @@ Shader "Holistic/CloudsCamera"
 				depth *= length(normalize(i.view));
 
 				fixed4 col = tex2D(_MainTex, i.uv);
+				plasma = CalculatePlasma(i.pos, 20, 2, 2, 2, 2);
 				fixed4 sum = raymarch(start, normalize(i.view), col, depth);
 				return fixed4(col * (1.0 - sum.a) + sum.rgb, 1.0);
 			}
