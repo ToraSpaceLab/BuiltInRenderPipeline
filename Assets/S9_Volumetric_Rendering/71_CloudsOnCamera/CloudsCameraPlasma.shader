@@ -51,6 +51,7 @@ Shader "Holistic/CloudsCameraPlasma"
 				fixed4 col = fixed4(colrgb.r, colrgb.g, colrgb.b, density);
 				col.rgb *= lighting;
 				col.rgb = lerp(col.rgb, bgcol, 1.0 - exp(-0.003 * t * t));
+				col.rgb = lerp(col.rgb, plasma, sum.a);
 				col.a *= 0.5;
 				col.rgb *= col.a;
 				return sum + col * (1.0 - sum.a);
